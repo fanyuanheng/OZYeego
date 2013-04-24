@@ -1,23 +1,29 @@
 {
-	"config_version": "2",
-	"name": "OZYeego",
-	"author": "fanyuanheng@gmail.com",
-	"version": "0.1",
-	"platform_version": "v1.4",
-	"description": "An empty app created by default",
-	"modules": {
-		"logging": {
-			"level": "DEBUG"
-		},
-		"contact": true,
-		"file": true,
-		"is": true,
-		"media": true,
-		"prefs": true,
-		"request": {
-			"permissions": ["http://*/*", "https://*/*"]
-		},
-		"tools": true,
-		"reload": true
-	}
+  "config_version": "2",
+  "name": "OZYeego",
+  "author": "fanyuanheng@gmail.com",
+  "version": "0.1",
+  "platform_version": "v1.4",
+  "description": "OZYeego App",
+  "modules": {
+    "logging": {
+      "level": "DEBUG"
+    },
+    "contact": true,
+    "file": true,
+    "is": true,
+    "media": true,
+    "prefs": true,
+    "request": {
+      "permissions": ["http://*/*", "https://*/*"]
+    },
+    "tools": true,
+    "reload": true
+  },
+  "partners": {
+    "parse": {
+      "applicationId": "6AwT2q6bsIluqlMh18EvOkJ6waGIYk32mXSoKUqM",
+      "clientKey": "03dkoVju5AkGKclTCJbed8G4jKGAtRKlEcbzmq0S"
+    }
+  }
 }
