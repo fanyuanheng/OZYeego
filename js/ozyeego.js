@@ -1,6 +1,8 @@
 Parse.initialize("5nnsyTkqFo5TMAkgW4l14bc9G0Kx9VXJQpg7kIIA", "ZoiiGTLEOvAExcAQpgTBuYOmLtXXeCHvLharWk9n");
 
-$(function() {
+$(document).ready(function () {
+  // forge.enableDebug();
+
   var Product = Backbone.Model.extend({
     defaults : {
       name : '',
@@ -15,6 +17,16 @@ $(function() {
   });
   var ProductView = Backbone.View.extend({
     tagName : 'li',
+    attributes: {
+      "data-corners" : "false",
+      "data-shadow" : "false",
+      "data-iconshadow" : "true",
+      "data-wrapperels" : "div",
+      "data-icon" : "arrow-r",
+      "data-iconpos" : "right",
+      "data-theme" : "c",
+      "class" : "ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-btn-up-c"
+    },
     template : null,
     events : {
 
@@ -66,4 +78,5 @@ $(function() {
   });
 
   var App = new AppView;
+
 });
