@@ -22,7 +22,7 @@ $(function() {
 
     initialize : function() {
       _.bindAll(this);
-      this.template = _.template('<img src="<%= image_url %>" /><span><%= name %></span>');
+      this.template = _.template('<img src="<%= image_url %>" /><span><%= name %></span> <span><%= our_price %></span>');
     },
     render : function() {
       $(this.el).html(this.template(this.model.toJSON()));
@@ -53,7 +53,6 @@ $(function() {
             });
           }));
           Products.each(function(product){
-
             var view = new ProductView({model: product});
             this.$("#products-list").append(view.render().el);
           }, this);
