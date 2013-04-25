@@ -29,7 +29,6 @@ body {
 	padding: 0px 0px 0px 7px;
 	display: block;
 	margin-left: 50px;
-	white-space: pre-wrap;
 }
 .list #product-rrp-price {
 	text-decoration: line-through;
