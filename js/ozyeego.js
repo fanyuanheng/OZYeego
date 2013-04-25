@@ -48,6 +48,8 @@ $(document).ready(function () {
   var AppView = Backbone.View.extend({
     el: $('body'),
     initialize: function() {
+
+      $.mobile.showPageLoadingMsg("a", "Loading latest products");
       var query = new Parse.Query(Parse.Object.extend("Product"));
       query.equalTo("supplier", "ChemistWarehouse");
       query.find({
@@ -64,6 +66,8 @@ $(document).ready(function () {
               category : result._serverData.category
             });
           }));
+
+          $.mobile.hidePageLoadingMsg();
           Products.each(function(product){
             var view = new ProductView({model: product});
             this.$("#products-list").append(view.render().el);
