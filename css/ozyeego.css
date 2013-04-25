@@ -16,12 +16,30 @@ body {
 	margin: 0;
 	width: 100%;
 	overflow: hidden;
-	white-space: nowrap;
 	text-overflow: ellipsis;
 }
 .list li img {
 	height: 50px;
 	width: 50px;
-	padding: 2px 7px 2px 2px;
-	vertical-align: middle
+	padding: 2px 0px 2px 2px;
+	vertical-align: middle;
+	float: left;
+}
+.list div {
+	padding: 0px 0px 0px 7px;
+	display: block;
+	margin-left: 50px;
+	white-space: pre-wrap;
+}
+.list #product-rrp-price {
+	text-decoration: line-through;
+	font-weight: bold;
+}
+.list #product-our-price {
+	color: green;
+	font-weight: bold;
+}
+.list #product-discount {
+	color: red;
+	font-weight: bold;
 }

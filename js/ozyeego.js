@@ -22,7 +22,7 @@ $(function() {
 
     initialize : function() {
       _.bindAll(this);
-      this.template = _.template('<img src="<%= image_url %>" /><span><%= name %></span> <span><%= our_price %></span>');
+      this.template = _.template('<img src="<%= image_url %>" /><div><span id="products-name"><%= name %></span></div><div>RRP Price: $<span id="product-rrp-price"><%= rrp_price %></span></div><div>Our Price: $<span id="product-our-price"><%= our_price %></span></div><div>Discount: $<span id="product-discount"><%= discount %></span></div>');
     },
     render : function() {
       $(this.el).html(this.template(this.model.toJSON()));
