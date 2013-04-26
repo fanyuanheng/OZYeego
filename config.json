@@ -9,6 +9,10 @@
     "logging": {
       "level": "DEBUG"
     },
+    "package_names": {
+      "android": "com.ozyeego.android.app",
+      "ios": "com.ozyeego.ios.app"
+    },
     "contact": true,
     "file": true,
     "is": true,

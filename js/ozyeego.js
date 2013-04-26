@@ -92,7 +92,7 @@ $(document).ready(function () {
       $('#menu').show();
       $.mobile.activePage.animate({
           marginLeft: "165px"
-      }, 300, function () {
+      }, 100, function () {
           menuStatus = true
       });
   };
@@ -102,7 +102,7 @@ $(document).ready(function () {
       }
       $.mobile.activePage.animate({
           marginLeft: "0px"
-      }, 300, function () {
+      }, 100, function () {
           menuStatus = false
           $('#menu').hide();
       });
