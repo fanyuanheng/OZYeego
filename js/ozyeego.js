@@ -2,6 +2,10 @@ Parse.initialize("5nnsyTkqFo5TMAkgW4l14bc9G0Kx9VXJQpg7kIIA", "ZoiiGTLEOvAExcAQpg
 
 $(document).ready(function () {
   // forge.enableDebug();
+  $(document).bind("mobileinit", function () {
+      $.mobile.pushStateEnabled = true;
+      $.mobile.touchOverflowEnabled = true;
+  });
 
   var Product = Backbone.Model.extend({
     defaults : {
@@ -84,9 +88,6 @@ $(document).ready(function () {
   var App = new AppView;
 
   // Menu setup
-  $(document).bind("mobileinit", function () {
-      $.mobile.pushStateEnabled = true;
-  });
   var menuStatus;
   var show = function() {
       if(menuStatus) {
@@ -121,8 +122,8 @@ $(document).ready(function () {
 
   // Show/hide the menu
   $("a.showMenu").click(toggle);
-  $('#menu, .pages').bind("swipeleft", hide);
-  $('.pages').bind("swiperight", show);
+  // $('#menu, .pages').bind("swipeleft", hide);
+  // $('.pages').bind("swiperight", show);
 
   $('div[data-role="page"]').bind('pagebeforeshow', function (event, ui) {
       menuStatus = false;
@@ -131,6 +132,7 @@ $(document).ready(function () {
 
   // Menu behaviour
   $("#menu li a").click(function () {
+      hide();
       $("#menu li.active").removeClass('active');
       $(this).parent().addClass('active');
   });
