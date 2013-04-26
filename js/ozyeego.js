@@ -131,9 +131,8 @@ $(document).ready(function () {
 
   // Menu behaviour
   $("#menu li a").click(function () {
-      var p = $(this).parent();
-      p.siblings().removeClass('active');
-      p.addClass('active');
+      $("#menu li.active").removeClass('active');
+      $(this).parent().addClass('active');
   });
 
 });
