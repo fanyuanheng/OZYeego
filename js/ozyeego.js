@@ -84,6 +84,9 @@ $(document).ready(function () {
   var App = new AppView;
 
   // Menu setup
+  $(document).bind("mobileinit", function () {
+      $.mobile.pushStateEnabled = true;
+  });
   var menuStatus;
   var show = function() {
       if(menuStatus) {
@@ -118,10 +121,10 @@ $(document).ready(function () {
 
   // Show/hide the menu
   $("a.showMenu").click(toggle);
-  $('#menu, .pages').live("swipeleft", hide);
-  $('.pages').live("swiperight", show);
+  $('#menu, .pages').bind("swipeleft", hide);
+  $('.pages').bind("swiperight", show);
 
-  $('div[data-role="page"]').live('pagebeforeshow', function (event, ui) {
+  $('div[data-role="page"]').bind('pagebeforeshow', function (event, ui) {
       menuStatus = false;
       $(".pages").css("margin-left", "0");
   });
