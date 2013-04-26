@@ -1,10 +1,10 @@
 {
   "config_version": "2",
-  "name": "澳洲易购",
+  "name": "ozyeego",
   "author": "fanyuanheng@gmail.com",
   "version": "0.1",
   "platform_version": "v1.4",
-  "description": "澳洲易购 APP",
+  "description": "OZ Yeego App",
   "modules": {
     "logging": {
       "level": "DEBUG"
@@ -18,8 +18,7 @@
       "permissions": ["http://*/*", "https://*/*"]
     },
     "tools": true,
-    "reload": true,
-    "topbar": true
+    "reload": true
   },
   "partners": {
     "parse": {
