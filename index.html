@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OZ Yeego</title>
+    <meta charset="UTF-8">
+    <title>&#x6FB3;&#x6D32;&#x6613;&#x8D2D; - ozyeego.com</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
     <link rel="stylesheet" href="css/ozyeego.css" />
@@ -17,9 +18,9 @@
 <body>
 
 <div id="menu" style="display: none;">
-  <h3>Menu</h3>
+  <h3>&#x6FB3;&#x6D32;&#x6613;&#x8D2D;</h3>
   <ul>
-    <li class="active"><a href="#home" class="contentLink">Home </a></li>
+    <li class="active"><a href="#home" class="contentLink">Home</a></li>
     <li><a href="#home" class="contentLink">About </a></li>
     <li><a href="#home" class="contentLink">Portfolio </a></li>
     <li><a href="#home" class="contentLink">Contact </a></li>
@@ -28,8 +29,8 @@
 
 <div data-role="page" class="pages" id="home">
   <div data-role="header">
-    <a href="#" class="showMenu" data-icon="grid">Menu</a>
-    <h1>OZYeego</h1>
+    <a href="#" class="showMenu" data-icon="grid">&#x83DC;&#x5355;</a>
+    <h1>&#x6FB3;&#x6D32;&#x6613;&#x8D2D;</h1>
   </div>
   <div>
     <ul id="products-list" data-role="listview">
@@ -43,9 +44,9 @@
       <a href="#" class="ui-link-inherit">
         <img src="<%= image_url %>" class="ui-li-thumb"/>
         <h3 class="ui-li-heading" id="product-name"><%= name %></h3>
-        <p class="ui-li-desc">RRP Price: $<span id="product-rrp-price"><%= rrp_price %></span></p>
-        <p class="ui-li-desc">Our Price: $<span id="product-our-price"><%= our_price %></span></p>
-        <p class="ui-li-desc">Discount: $<span id="product-discount"><%= discount %></span></p>
+        <p class="ui-li-desc">&#x96F6;&#x552E;&#x4EF7;: $<span id="product-rrp-price"><%= rrp_price %></span></p>
+        <p class="ui-li-desc">&#x6613;&#x8D2D;&#x4EF7;: $<span id="product-our-price"><%= our_price %></span></p>
+        <p class="ui-li-desc">&#x5373;&#x7701;: $<span id="product-discount"><%= discount %></span></p>
       </a>
     </div>
   </div>

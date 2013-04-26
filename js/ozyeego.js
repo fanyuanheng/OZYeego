@@ -49,7 +49,7 @@ $(document).ready(function () {
     el: $('body'),
     initialize: function() {
 
-      $.mobile.showPageLoadingMsg("a", "Loading latest products");
+      $.mobile.showPageLoadingMsg();
       var query = new Parse.Query(Parse.Object.extend("Product"));
       query.equalTo("supplier", "ChemistWarehouse");
       query.find({
