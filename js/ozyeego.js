@@ -6,11 +6,28 @@ var initMenuPanel = function() {
   $('#products').trigger("create");
 }
 
-var queryProducts = function(callback) {
+var initSearchFilter = function() {
+  $('#filter-panel a').click(function() {
+    $("#products-list").html('');
+    queryProducts($(this).attr('query-category'), function(results){
+      results.each(function(product){
+        var view = new ProductView({model: product});
+        $("#products-list").append(view.render().el);
+      }, this);
+    });
+  });
+}
+
+var queryProducts = function(category, callback) {
   $.mobile.showPageLoadingMsg();
 
   var query = new Parse.Query(Parse.Object.extend("Product"));
   query.equalTo("supplier", "ChemistWarehouse");
+  if (category != 'all') {
+    query.equalTo("category", category);
+  }
+  // query.skip(10);
+  query.limit(10);
   query.find({
     success: function(results) {
       var Products = new ProductList(_.map(results, function(result) {
@@ -44,6 +61,7 @@ $(document).ready(function () {
   });
 
   initMenuPanel();
+  initSearchFilter();
 
   var App = new AppView;
 

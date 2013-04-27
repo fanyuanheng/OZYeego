@@ -27,7 +27,7 @@ var ProductView = Backbone.View.extend({
 var AppView = Backbone.View.extend({
   el: $('body'),
   initialize: function() {
-    queryProducts(function(results){
+    queryProducts('all', function(results){
       results.each(function(product){
         var view = new ProductView({model: product});
         this.$("#products-list").append(view.render().el);
