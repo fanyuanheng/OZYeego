@@ -20,10 +20,21 @@
   </head>
 <body>
 
-<div data-role="page" class="pages" id="products">      
+<div data-role="page" class="pages" id="products" data-dom-cache="false">
+  <div id="filter-panel" data-role="panel" data-position="right" data-display="overlay" data-theme="a">
+    <ul data-role="listview" data-theme="a" data-divider-theme="a">
+      <li><a href="#">&#x9999;&#x6C34;</a></li>
+      <li><a href="#">&#x7EF4;&#x4ED6;&#x547D;</a></li>
+      <li><a href="#">&#x7626;&#x8EAB;</a></li>
+      <li><a href="#">&#x5A74;&#x513F;&#x62A4;&#x7406;</a></li>
+      <li><a href="#">&#x7F8E;&#x5BB9;</a></li>
+      <li><a href="#">&#x62A4;&#x80A4;</a></li>
+    </ul>
+  </div>     
   <div data-role="header" data-position="fixed">
     <a href="#menu-panel" data-icon="bars" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a"></a>
     <h1>&#x6FB3;&#x6D32;&#x6613;&#x8D2D;</h1>
+    <a href="#filter-panel" data-icon="search" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a"></a>
   </div>
   <div data-role="content">
     <ul id="products-list" data-role="listview">
@@ -79,8 +90,8 @@
 <script type="x-mustache-template" id="menu-panel-template">
   <div id="menu-panel" data-role="panel" data-position="left" data-display="push" data-theme="a">
     <ul data-role="listview" data-theme="a" data-divider-theme="a">
-      <li><a href="#products">&#x6240;&#x6709;&#x5546;&#x54C1;</a></li>
-      <li><a href="#about-us">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+      <li><a href="#products" data-transition="slide">&#x6240;&#x6709;&#x5546;&#x54C1;</a></li>
+      <li><a href="#about-us" data-transition="slide">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
     </ul>
   </div>
 </script>
