@@ -9,6 +9,7 @@ var initMenuPanel = function() {
 var initSearchFilter = function() {
   $('#filter-panel a').click(function() {
     $("#products-list").html('');
+    $("#filter-panel").panel("close");
     queryProducts($(this).attr('query-category'), function(results){
       results.each(function(product){
         var view = new ProductView({model: product});
