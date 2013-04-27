@@ -1,6 +1,6 @@
 var ProductView = Backbone.View.extend({
   tagName : 'li',
-  attributes: {
+  attributes : {
     "data-corners" : "false",
     "data-shadow" : "false",
     "data-iconshadow" : "true",
@@ -29,6 +29,7 @@ var AppView = Backbone.View.extend({
   initialize: function() {
 
     $.mobile.showPageLoadingMsg();
+
     var query = new Parse.Query(Parse.Object.extend("Product"));
     query.equalTo("supplier", "ChemistWarehouse");
     query.find({

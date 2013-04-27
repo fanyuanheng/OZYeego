@@ -20,13 +20,7 @@
   </head>
 <body>
 
-<div data-role="page" class="pages" id="products">
-  <div id="menu-panel" data-role="panel" data-position="left" data-display="push" data-theme="a">
-    <ul data-role="listview" data-theme="a" data-divider-theme="a">
-      <li><a href="#products">&#x6240;&#x6709;&#x5546;&#x54C1;</a></li>
-      <li><a href="#about-us">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
-    </ul>
-  </div>
+<div data-role="page" class="pages" id="products">      
   <div data-role="header" data-position="fixed">
     <a href="#menu-panel" data-icon="bars" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a"></a>
     <h1>&#x6FB3;&#x6D32;&#x6613;&#x8D2D;</h1>
@@ -38,12 +32,6 @@
 </div>
 
 <div data-role="page" class="pages" id="about-us">
-  <div id="menu-panel" data-role="panel" data-position="left" data-display="push" data-theme="a">
-    <ul data-role="listview" data-theme="a" data-divider-theme="a">
-      <li><a href="#products">&#x6240;&#x6709;&#x5546;&#x54C1;</a></li>
-      <li><a href="#about-us">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
-    </ul>
-  </div>
   <div data-role="header" data-position="fixed">
     <a href="#menu-panel" data-icon="bars" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a"></a>
     <h1>&#x5173;&#x4E8E;&#x6211;&#x4EEC;</h1>
@@ -85,6 +73,15 @@
         <p class="ui-li-desc">&#x5373;&#x7701;: $<span id="product-discount">{{discount}}</span></p>
       </a>
     </div>
+  </div>
+</script>
+
+<script type="x-mustache-template" id="menu-panel-template">
+  <div id="menu-panel" data-role="panel" data-position="left" data-display="push" data-theme="a">
+    <ul data-role="listview" data-theme="a" data-divider-theme="a">
+      <li><a href="#products">&#x6240;&#x6709;&#x5546;&#x54C1;</a></li>
+      <li><a href="#about-us">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+    </ul>
   </div>
 </script>
 
