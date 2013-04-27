@@ -16,11 +16,10 @@ var ProductView = Backbone.View.extend({
   },
 
   initialize : function() {
-    _.bindAll(this);
-    this.template = _.template($('#productTemplate').html());
+    this.template = $('#product-template').html();
   },
   render : function() {
-    $(this.el).html(this.template(this.model.toJSON()));
+    $(this.el).html(Mustache.to_html(this.template, this.model.toJSON()));
     return this;
   }
 });
